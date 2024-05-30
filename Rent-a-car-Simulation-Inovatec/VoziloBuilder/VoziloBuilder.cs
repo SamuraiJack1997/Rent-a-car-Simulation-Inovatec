@@ -9,7 +9,7 @@ namespace Rent_a_car_Simulation_Inovatec.VehicleBuilder
 {
     public class VoziloBuilder
     {
-        private Vozilo _vozilo;
+        private readonly Vozilo _vozilo = new Vozilo();
 
         public VoziloBuilder()
         {
@@ -36,33 +36,33 @@ namespace Rent_a_car_Simulation_Inovatec.VehicleBuilder
             _vozilo.Model = Model;
             return this;
         }
-        public VoziloBuilder setPotrosnja(float Potrosnja)
+        public VoziloBuilder setPotrosnja(double Potrosnja)
         {
             _vozilo.Potrosnja = Potrosnja;
             return this;
         }
-        public VoziloBuilder setKubikaza(int Kubikaza)
+        public VoziloBuilder setKubikaza(int? Kubikaza)
         {
             _vozilo.Kubikaza = Kubikaza;
             return this;
         }
-        public VoziloBuilder setKilometraza(int Kilometraza)
+        public VoziloBuilder setKilometraza(int? Kilometraza)
         {
             _vozilo.Kilometraza = Kilometraza;
             return this;
         }
-        public VoziloBuilder setSnaga(int Snaga)
+        public VoziloBuilder setSnaga(int? Snaga)
         {
             _vozilo.Snaga = Snaga;
             return this;
         }
-        public VoziloBuilder setTipAuta(Tip tip)
+        public VoziloBuilder setTip(Tip tip)
         {
             _vozilo.tip = tip;
             return this;
         }
 
-        public VoziloBuilder setOprema(List<Oprema> oprema)
+        public VoziloBuilder setOprema(List<Oprema>? oprema)
         {
             _vozilo.oprema = oprema;
             return this;

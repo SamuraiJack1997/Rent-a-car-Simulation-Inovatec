@@ -15,9 +15,9 @@ namespace Rent_a_car_Simulation_Inovatec.Models
         public Marka marka { get; set; }
         public string Model { get; set; }
         public double Potrosnja { get; set; }
-        public int Kubikaza { get; set; }
-        public int Kilometraza { get; set; }
-        public int Snaga { get; set; }
+        public int? Kubikaza { get; set; }
+        public int? Kilometraza { get; set; }
+        public int? Snaga { get; set; }
         public Tip tip { get; set; }
         public List<Oprema>? oprema { get; set; }
 
