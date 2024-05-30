@@ -12,7 +12,8 @@ namespace Rent_a_car_Simulation_Inovatec.Models
         public int Id { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
-        public float Budzet { get; set; }
+        public double Budzet { get; set; }
         public string Clanarina { get; set; }
+    
     }
 }

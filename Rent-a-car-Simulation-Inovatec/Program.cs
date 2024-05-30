@@ -6,44 +6,53 @@ using Rent_a_car_Simulation_Inovatec.Interfaces;
 
 namespace Rent_a_car_Simulation_Inovatec
 {
+    public enum TipVozila
+    {
+        Auto,
+        Motor
+    }
+    public enum MarkaAuta
+    {
+        Mercedes,
+        BMW,
+        Peugeot
+    }
+    public enum TipAuta
+    {
+        Limuzina,
+        Hecbek,
+        Karavan,
+        Kupe,
+        Kabriolet,
+        Minivan,
+        SUV,
+        Pickup
+    }
+    public enum MarkaMotora
+    {
+        Yamaha,
+        Harley
+    }
+    public enum TipMotora
+    {
+        Adventure,
+        Heritage,
+        Tour,
+        Roadster,
+        UrbanMobility,
+        Sport
+    }
+    public enum Bonus
+    {
+        VIP,
+        Basic,
+        None
+    }
     public class Program
     {
-        public enum CsvFilePath
-        {
-            KupciCSV,
-            OpremaCSV,
-            RezervacijeCSV,
-            VozilaCSV,
-            VoziloOpremaCSV,
-            ZahteviZaRezervacijeCSV,
-            NoveRezervacijeCSV
-        }
-
-        static string GetFilePath(CsvFilePath filePath)
-        {
-            switch (filePath)
-            {
-                case CsvFilePath.KupciCSV:
-                    return "CSV/kupci.csv";
-                case CsvFilePath.OpremaCSV:
-                    return "CSV/oprema.csv";
-                case CsvFilePath.RezervacijeCSV:
-                    return "CSV/rezervacije.csv";
-                case CsvFilePath.VozilaCSV:
-                    return "CSV/vozila.csv";
-                case CsvFilePath.VoziloOpremaCSV:
-                    return "CSV/vozilo_oprema.csv";
-                case CsvFilePath.ZahteviZaRezervacijeCSV:
-                    return "CSV/zahtevi_za_rezervacije.csv";
-                case CsvFilePath.NoveRezervacijeCSV:
-                    return "CSV/nove_rezervacije.csv";
-                default:
-                    throw new ArgumentException("Nevalidna vrednost putanja za enum.");
-            }
-        }
         static void Main(string[] args)
         {
-            Kupci kupci = new Kupci(GetFilePath(CsvFilePath.KupciCSV));
+           
         }
     }
 }
