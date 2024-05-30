@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|c:\\users\\aleks\\desktop\\rent-a-car-simulation-inovatec\\rent-a-car-simulation-inovatec\\models\\kupci.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|solutionrelative:models\\kupci.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|c:\\users\\aleks\\desktop\\rent-a-car-simulation-inovatec\\rent-a-car-simulation-inovatec\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|c:\\users\\aleks\\desktop\\rent-a-car-simulation-inovatec\\rent-a-car-simulation-inovatec\\models\\kupci.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|solutionrelative:models\\kupci.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|c:\\users\\aleks\\desktop\\rent-a-car-simulation-inovatec\\rent-a-car-simulation-inovatec\\models\\kupac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,15 +50,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 189,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -74,8 +70,7 @@
               "RelativeToolTip": "CSV\\zahtevi_za_rezervacije.csv",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2024-05-30T13:03:52.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T13:03:52.455Z"
             },
             {
               "$type": "Document",
@@ -87,8 +82,7 @@
               "RelativeToolTip": "CSV\\vozilo_oprema.csv",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2024-05-30T13:03:42.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T13:03:42.9Z"
             },
             {
               "$type": "Document",
@@ -100,12 +94,11 @@
               "RelativeToolTip": "CSV\\vozila.csv",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2024-05-30T13:03:35.663Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T13:03:35.663Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -126,8 +119,7 @@
               "RelativeToolTip": "CSV\\rezervacije.csv",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2024-05-30T13:03:26.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T13:03:26.838Z"
             },
             {
               "$type": "Document",
@@ -139,8 +131,7 @@
               "RelativeToolTip": "CSV\\oprema.csv",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2024-05-30T13:03:20.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T13:03:20.431Z"
             },
             {
               "$type": "Document",
@@ -152,8 +143,7 @@
               "RelativeToolTip": "CSV\\kupci.csv",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2024-05-30T13:02:26.958Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T13:02:26.958Z"
             }
           ]
         },
@@ -171,8 +161,7 @@
               "RelativeToolTip": "Models\\Kupac.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T13:40:07.906Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T13:40:07.906Z"
             },
             {
               "$type": "Document",
@@ -184,12 +173,11 @@
               "RelativeToolTip": "Interfaces\\IReadCSV.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T11:56:06.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-30T11:56:06.408Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Kupci.cs",
               "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\Models\\Kupci.cs",
               "RelativeDocumentMoniker": "Models\\Kupci.cs",
