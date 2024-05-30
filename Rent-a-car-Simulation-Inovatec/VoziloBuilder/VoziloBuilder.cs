@@ -26,14 +26,9 @@ namespace Rent_a_car_Simulation_Inovatec.VehicleBuilder
             _vozilo.tipVozila = tipVozila;
             return this;
         }
-        public VoziloBuilder setMarkaAuta(MarkaAuta markaAuta) 
+        public VoziloBuilder setMarka(Marka marka) 
         {
-            _vozilo.markaAuta = markaAuta;
-            return this;
-        }
-        public VoziloBuilder setMarkaMotora(MarkaMotora markaMotora) 
-        {
-            _vozilo.markaMotora = markaMotora;
+            _vozilo.marka = marka;
             return this;
         }
         public VoziloBuilder setModel(string Model)
@@ -61,16 +56,12 @@ namespace Rent_a_car_Simulation_Inovatec.VehicleBuilder
             _vozilo.Snaga = Snaga;
             return this;
         }
-        public VoziloBuilder setTipAuta(TipAuta tipAuta)
+        public VoziloBuilder setTipAuta(Tip tip)
         {
-            _vozilo.tipAuta = tipAuta;
+            _vozilo.tip = tip;
             return this;
         }
-        public VoziloBuilder setTipMotora(TipMotora tipMotora)
-        {
-            _vozilo.tipMotora = tipMotora;
-            return this;
-        }
+
         public VoziloBuilder setOprema(List<Oprema> oprema)
         {
             _vozilo.oprema = oprema;

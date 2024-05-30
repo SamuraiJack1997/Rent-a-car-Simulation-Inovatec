@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Rent_a_car_Simulation_Inovatec.Models
 {
-    public class Rezervacije
+    public class Rezervacija
     {
         public int VoziloId {  get; set; }
         public int KupacId {  get; set; }

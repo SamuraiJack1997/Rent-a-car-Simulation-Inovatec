@@ -15,35 +15,40 @@ namespace Rent_a_car_Simulation_Inovatec.StrategijaCena
             double pocetnaCena = 100;
             double konacnaCena = pocetnaCena;
 
-            switch (vozilo.markaMotora)
+            switch (vozilo.marka)
             {
-                case MarkaMotora.Harley:
-                    konacnaCena += konacnaCena * 0.15;
+                case Marka.Harley:
+                    konacnaCena += pocetnaCena * 0.15;
                     if (vozilo.Kubikaza > 1200)
-                        konacnaCena += konacnaCena * 0.10;
-                    else konacnaCena -= konacnaCena * 0.05;
+                        konacnaCena += pocetnaCena * 0.10;
+                    else konacnaCena -= pocetnaCena * 0.05;
                     break;
-                case MarkaMotora.Yamaha:
-                    konacnaCena += konacnaCena * 0.10;
+                case Marka.Yamaha:
+                    konacnaCena += pocetnaCena * 0.10;
                     if (vozilo.Snaga > 180)
-                        konacnaCena += konacnaCena * 0.05;
-                    else konacnaCena -= konacnaCena * 0.10;
-                    if (vozilo.tipMotora.Equals(TipMotora.Heritage))
+                        konacnaCena += pocetnaCena * 0.05;
+                    else konacnaCena -= pocetnaCena * 0.10;
+
+                    if (vozilo.tip.Equals(Tip.Heritage))
                         konacnaCena += 50;
-                    else if (vozilo.tipMotora.Equals(TipMotora.Sport))
+                    else if (vozilo.tip.Equals(Tip.Sport))
                         konacnaCena += 100;
                     else konacnaCena -= 10;
                     break;
             }
 
-            //TODO URACUNATI OPREMU
+            if (vozilo.oprema != null)
+                foreach (Oprema o in vozilo.oprema)
+                if (!(o is null))
+                    if (o.PovecavaCenu.Equals(1))
+                        konacnaCena += o.Cena;
 
-            if (kupac.Clanarina.Equals(Bonus.VIP))
-                    pocetnaCena -= pocetnaCena * 0.20;
-            else if (kupac.Clanarina.Equals(Bonus.Basic))
-                    pocetnaCena -= pocetnaCena * 0.10;
+            if (kupac.clanarina.Equals(Clanarina.VIP))
+                konacnaCena -= pocetnaCena * 0.20;
+            else if (kupac.clanarina.Equals(Clanarina.Basic))
+                konacnaCena -= pocetnaCena * 0.10;
 
-            return konacnaCena;
+            return konacnaCena*BrojDana;
         }
     }
 }

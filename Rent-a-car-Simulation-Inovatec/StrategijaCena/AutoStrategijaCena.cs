@@ -15,40 +15,44 @@ namespace Rent_a_car_Simulation_Inovatec.StrategijaCena
             double pocetnaCena = 200;
             double konacnaCena = pocetnaCena;
 
-            switch (vozilo.markaAuta)
+            switch (vozilo.marka)
             {
-                case MarkaAuta.Mercedes:
+                case Marka.Mercedes:
                     if (vozilo.Kilometraza < 50000)
-                        konacnaCena += konacnaCena * 0.06;
-                    if (vozilo.tipAuta.Equals(TipAuta.Limuzina))
-                        konacnaCena += konacnaCena * 0.07;
-                    if (vozilo.tipAuta.Equals(TipAuta.Hecbek) && vozilo.Kilometraza > 100000)
-                        konacnaCena -= konacnaCena * 0.03;
+                        konacnaCena += pocetnaCena * 0.06;
+                    if (vozilo.tip.Equals(Tip.Limuzina))
+                        konacnaCena += pocetnaCena * 0.07;
+                    else if (vozilo.tip.Equals(Tip.Hecbek) && vozilo.Kilometraza > 100000)
+                        konacnaCena -= pocetnaCena * 0.03;
                     break;
-                case MarkaAuta.BMW:
+                case Marka.BMW:
                     if (vozilo.Potrosnja < 7)
-                        konacnaCena += konacnaCena * 0.15;
+                        konacnaCena += pocetnaCena * 0.15;
                     else if (vozilo.Potrosnja > 7)
-                        konacnaCena -= konacnaCena * 0.10;
-                    else konacnaCena -= konacnaCena * 0.15;
+                        konacnaCena -= pocetnaCena * 0.10;
+                    else konacnaCena -= pocetnaCena * 0.15;
                     break;
-                case MarkaAuta.Peugeot:
-                    if (vozilo.tipAuta.Equals(TipAuta.Limuzina))
-                        konacnaCena += konacnaCena * 0.15;
-                    else if (vozilo.tipAuta.Equals(TipAuta.Karavan))
-                        konacnaCena += konacnaCena * 0.20;
-                    else konacnaCena -= konacnaCena * 0.05;
+                case Marka.Peugeot:
+                    if (vozilo.tip.Equals(Tip.Limuzina))
+                        konacnaCena += pocetnaCena * 0.15;
+                    else if (vozilo.tip.Equals(Tip.Karavan))
+                        konacnaCena += pocetnaCena * 0.20;
+                    else konacnaCena -= pocetnaCena * 0.05;
                     break;
             }
 
-            //TODO URACUNATI OPREMU
+            if(vozilo.oprema!=null)
+                foreach (Oprema o in vozilo.oprema)
+                    if (!(o is null))
+                        if (o.PovecavaCenu.Equals(1))
+                            konacnaCena += o.Cena;
 
-            if (kupac.Clanarina.Equals(Bonus.VIP))
-                pocetnaCena -= pocetnaCena * 0.20;
-            else if (kupac.Clanarina.Equals(Bonus.Basic))
-                pocetnaCena -= pocetnaCena * 0.10;
+            if (kupac.clanarina.Equals(Clanarina.VIP))
+                konacnaCena -= pocetnaCena * 0.20;
+            else if (kupac.clanarina.Equals(Clanarina.Basic))
+                konacnaCena -= pocetnaCena * 0.10;
 
-            return konacnaCena;
+            return konacnaCena*BrojDana;
         }
     }
 }
