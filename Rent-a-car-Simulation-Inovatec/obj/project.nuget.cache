@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "rT+h/Qq/+KE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aleks\\.nuget\\packages\\csvhelper\\32.0.3\\csvhelper.32.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
