@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Rent-a-car-Simulation-Inovatec")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e34ea88c38d9e1fc9e9dd476e3c2c6b7e7ebd72")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+615cfd5852e39867573427d6fe07d7ffe4c75ede")]
 [assembly: System.Reflection.AssemblyProductAttribute("Rent-a-car-Simulation-Inovatec")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Rent-a-car-Simulation-Inovatec")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

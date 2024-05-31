@@ -18,8 +18,12 @@ namespace Rent_a_car_Simulation_Inovatec.Interfaces
         public List<Vozilo> loadVozila();
         public List<VoziloOprema> loadVozilaOprema();
         public List<ZahtevRezervacija> loadZahteviRezervacije();
-        public void createNoveRezervacije(List<Rezervacija> noveRezervacije);
+        public void sacuvajNoveRezervacije(List<Rezervacija> noveRezervacije);
         public void izlistajVozila(List<Vozilo> vozila);
-
+        public void izlistajKupce(List<Kupac> kupci);
+        public void izlistajOpremu(List<Oprema> oprema);
+        public void izlistajRezervacije(List<Rezervacija> rezervacije); public void izlistajOpremuPoVozilu(List<VoziloOprema> vozilo_oprema);
+        public void izlistajZahteveZaRezervaciju(List<ZahtevRezervacija> zahteviRezervacija);
+        public void izlistajNoveRezervacije(List<Rezervacija> noveRezervacije);
     }
 }

@@ -10,8 +10,8 @@ namespace Rent_a_car_Simulation_Inovatec.Models
     {
         public int VoziloID { get; set; }
         public int KupacID { get; set; }
-        public DateTime DatumDolaska { get; set; }
-        public DateTime PocetakRezervacije { get; set; }
+        public DateOnly DatumDolaska { get; set; }
+        public DateOnly PocetakRezervacije { get; set; }
         public int BrojDana { get; set; }
     }
 }
