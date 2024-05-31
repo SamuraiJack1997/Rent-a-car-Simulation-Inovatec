@@ -1,44 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|c:\\users\\aleks\\desktop\\rent-a-car-simulation-inovatec\\rent-a-car-simulation-inovatec\\csvmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|solutionrelative:csvmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|c:\\users\\aleks\\desktop\\rent-a-car-simulation-inovatec\\rent-a-car-simulation-inovatec\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|c:\\users\\aleks\\desktop\\rent-a-car-simulation-inovatec\\rent-a-car-simulation-inovatec\\interfaces\\icsvmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|solutionrelative:interfaces\\icsvmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|c:\\users\\aleks\\desktop\\rent-a-car-simulation-inovatec\\rent-a-car-simulation-inovatec\\csv\\zahtevi_za_rezervacije.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|solutionrelative:csv\\zahtevi_za_rezervacije.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|c:\\users\\aleks\\desktop\\rent-a-car-simulation-inovatec\\rent-a-car-simulation-inovatec\\csv\\vozilo_oprema.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|solutionrelative:csv\\vozilo_oprema.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|c:\\users\\aleks\\desktop\\rent-a-car-simulation-inovatec\\rent-a-car-simulation-inovatec\\csv\\vozila.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|solutionrelative:csv\\vozila.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|c:\\users\\aleks\\desktop\\rent-a-car-simulation-inovatec\\rent-a-car-simulation-inovatec\\csv\\oprema.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|solutionrelative:csv\\oprema.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|c:\\users\\aleks\\desktop\\rent-a-car-simulation-inovatec\\rent-a-car-simulation-inovatec\\csv\\rezervacije.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|solutionrelative:csv\\rezervacije.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|c:\\users\\aleks\\desktop\\rent-a-car-simulation-inovatec\\rent-a-car-simulation-inovatec\\csv\\kupci.csv||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{63867084-69E2-4DF9-8142-94FECD298677}|Rent-a-car-Simulation-Inovatec.csproj|solutionrelative:csv\\kupci.csv||{8B382828-6202-11D1-8870-0000F87579D2}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -46,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 239,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,129 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T15:11:49.369Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CSVManager.cs",
-              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\CSVManager.cs",
-              "RelativeDocumentMoniker": "CSVManager.cs",
-              "ToolTip": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\CSVManager.cs",
-              "RelativeToolTip": "CSVManager.cs",
-              "ViewState": "AQIAAGwAAAAAAAAAAAAAAIMAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T21:52:55.124Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 139,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ICSVManager.cs",
-              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\Interfaces\\ICSVManager.cs",
-              "RelativeDocumentMoniker": "Interfaces\\ICSVManager.cs",
-              "ToolTip": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\Interfaces\\ICSVManager.cs",
-              "RelativeToolTip": "Interfaces\\ICSVManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T15:35:05.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "vozila.csv",
-              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\CSV\\vozila.csv",
-              "RelativeDocumentMoniker": "CSV\\vozila.csv",
-              "ToolTip": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\CSV\\vozila.csv",
-              "RelativeToolTip": "CSV\\vozila.csv",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2024-05-31T15:33:17.856Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "vozilo_oprema.csv",
-              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\CSV\\vozilo_oprema.csv",
-              "RelativeDocumentMoniker": "CSV\\vozilo_oprema.csv",
-              "ToolTip": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\CSV\\vozilo_oprema.csv",
-              "RelativeToolTip": "CSV\\vozilo_oprema.csv",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2024-05-31T15:33:18.304Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "zahtevi_za_rezervacije.csv",
-              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\CSV\\zahtevi_za_rezervacije.csv",
-              "RelativeDocumentMoniker": "CSV\\zahtevi_za_rezervacije.csv",
-              "ToolTip": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\CSV\\zahtevi_za_rezervacije.csv",
-              "RelativeToolTip": "CSV\\zahtevi_za_rezervacije.csv",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2024-05-31T15:33:18.76Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "oprema.csv",
-              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\CSV\\oprema.csv",
-              "RelativeDocumentMoniker": "CSV\\oprema.csv",
-              "ToolTip": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\CSV\\oprema.csv",
-              "RelativeToolTip": "CSV\\oprema.csv",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2024-05-31T15:33:16.044Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "rezervacije.csv",
-              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\CSV\\rezervacije.csv",
-              "RelativeDocumentMoniker": "CSV\\rezervacije.csv",
-              "ToolTip": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\CSV\\rezervacije.csv",
-              "RelativeToolTip": "CSV\\rezervacije.csv",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2024-05-31T15:33:17.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "kupci.csv",
-              "DocumentMoniker": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\CSV\\kupci.csv",
-              "RelativeDocumentMoniker": "CSV\\kupci.csv",
-              "ToolTip": "C:\\Users\\aleks\\Desktop\\Rent-a-car-Simulation-Inovatec\\Rent-a-car-Simulation-Inovatec\\CSV\\kupci.csv",
-              "RelativeToolTip": "CSV\\kupci.csv",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2024-05-31T15:33:11.921Z",
-              "EditorCaption": ""
             }
           ]
         }

@@ -12,5 +12,10 @@ namespace Rent_a_car_Simulation_Inovatec.Models
         public string Naziv { get; set; }
         public double Cena { get; set; }
         public bool PovecavaCenu { get; set; }
+
+        public override string? ToString()
+        {
+            return $"[ID:{Id}, Naziv:{Naziv}, Cena:{Cena}, PovecavaCenu:{PovecavaCenu}]";
+        }
     }
 }

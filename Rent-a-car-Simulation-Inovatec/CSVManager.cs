@@ -14,12 +14,24 @@ namespace Rent_a_car_Simulation_Inovatec
 {
     public class CSVManager : ICSVManager
     {
-        string kupciCSV = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"CSV\kupci.csv");
-        string opremaCSV = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"CSV\oprema.csv");
-        string rezervacijeCSV = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"CSV\rezervacije.csv");
-        string vozilaCSV = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"CSV\vozila.csv");
-        string vozilo_opremaCSV = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"CSV\vozilo_oprema.csv");
-        string zahtevi_za_rezervacijeCSV = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"CSV\zahtevi_za_rezervacije.csv");
+        private static CSVManager instance;
+        private CSVManager() { }
+        public static CSVManager GetInstance()
+        {
+            if (instance == null)
+            {
+                instance = new CSVManager();
+            }
+            return instance;
+        }
+
+        public string kupciCSV = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"CSV\kupci.csv");
+        public string opremaCSV = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"CSV\oprema.csv");
+        public string rezervacijeCSV = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"CSV\rezervacije.csv");
+        public string vozilaCSV = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"CSV\vozila.csv");
+        public string vozilo_opremaCSV = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"CSV\vozilo_oprema.csv");
+        public string zahtevi_za_rezervacijeCSV = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"CSV\zahtevi_za_rezervacije.csv");
+        public string nove_rezervacijeCSV = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"CSV\nove_rezervacije.csv");
 
         public List<Kupac> loadKupci()
         {
@@ -54,7 +66,6 @@ namespace Rent_a_car_Simulation_Inovatec
 
             return kupci;
         }
-
         public List<Oprema> loadOprema()
         {
             var oprema = new List<Oprema>();
@@ -81,7 +92,6 @@ namespace Rent_a_car_Simulation_Inovatec
 
             return oprema;
         }
-
         public List<Rezervacija> loadRezervacija()
         {
             var rezervacije = new List<Rezervacija>();
@@ -107,7 +117,6 @@ namespace Rent_a_car_Simulation_Inovatec
 
             return rezervacije;
         }
-
         public List<Vozilo> loadVozila()
         {
             var vozila = new List<Vozilo>();
@@ -149,7 +158,7 @@ namespace Rent_a_car_Simulation_Inovatec
 
             return vozila;
         }
-        public List<VoziloOprema> loadVozilaOprema()
+        public List<Vozilo> loadVozilaOprema(List<Vozilo> vozila,List<Oprema> oprema)
         {
             var vozilo_oprema = new List<VoziloOprema>();
 
@@ -170,9 +179,16 @@ namespace Rent_a_car_Simulation_Inovatec
                 }
             }
 
-            return vozilo_oprema;
-        }
+            foreach (var vo in vozilo_oprema)
+            {
+                foreach (var vozilo in vozila.Where(v => v.Id.Equals(vo.VoziloID) && v.oprema is null))
+                {
+                    vozilo.oprema = oprema.Where(o => vo.OpremaID.Equals(o.Id)).ToList();
+                }
+            }
 
+            return vozila;
+        }
         public List<ZahtevRezervacija> loadZahteviRezervacije()
         {
             var zahtevi_za_rezervaciju = new List<ZahtevRezervacija>();
@@ -199,60 +215,46 @@ namespace Rent_a_car_Simulation_Inovatec
 
             return zahtevi_za_rezervaciju;
         }
-
-        public void sacuvajNoveRezervacije(List<Rezervacija> noveRezervacije)
+        public void sacuvajNoveRezervacije(Rezervacija novaRezervacija)
         {
-            //TODO sacuvajNoveRezervacije
-            throw new NotImplementedException();
-        }
 
-        public void izlistajVozila(List<Vozilo> vozila)
-        {
-            foreach (var vozilo in vozila) 
+            string newLine = $"{novaRezervacija.VoziloId},{novaRezervacija.KupacId},{novaRezervacija.PocetakRezervacije},{novaRezervacija.KrajRezervacije}";
+            try
             {
-                string v;
-                v="Id:"+vozilo.Id+", TipVozila:"+vozilo.tipVozila+", Marka:"+vozilo.marka+", Model:"+vozilo.Model+", Potrosnja:"+vozilo.Potrosnja+", ";
-
-                if (vozilo.Kubikaza.Equals(null)) v += "Kubikaza:None, "; else v += " Kubikaza:"+vozilo.Kubikaza+", ";
-                if (vozilo.Kilometraza.Equals(null)) v += "Kilometraza:None, "; else v += "Kilometraza:"+vozilo.Kilometraza + ", ";
-                if (vozilo.Snaga.Equals(null)) v += "Snaga:None, "; else v += "Snaga:"+vozilo.Snaga + ", ";
-
-                v += "Tip:"+vozilo.tip;
-                Console.WriteLine(v);
+                using (StreamWriter sw = new StreamWriter(nove_rezervacijeCSV, true))
+                {
+                    sw.WriteLine(newLine);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Greška prilikom čuvanja rezervacije: {ex.Message}");
             }
         }
+        public List<Rezervacija> loadNoveRezervacije()
+        {
+            var nove_rezervacije = new List<Rezervacija>();
 
-        public void izlistajKupce(List<Kupac> kupci)
-        {
-            foreach (var kupac in kupci)
-                Console.WriteLine($"Id:{kupac.Id}, Ime:{kupac.Ime}, Prezime:{kupac.Prezime}, Budzet:{kupac.Budzet}, Clanarina:{kupac.clanarina}");
-        }
+            using (var reader = new StreamReader(nove_rezervacijeCSV))
+            {
+                string headerLine = reader.ReadLine();
 
-        public void izlistajOpremu(List<Oprema> oprema)
-        {
-            foreach (var o in oprema)
-                Console.WriteLine($"Id:{o.Id}, Naziv:{o.Naziv}, Cena:{o.Cena}, PovecavaCenu:{o.PovecavaCenu}");
-        }
-        public void izlistajRezervacije(List<Rezervacija> rezervacije)
-        {
-            foreach (var rezervacija in rezervacije)
-                Console.WriteLine($"VoziloId: {rezervacija.VoziloId}, KupacId:{rezervacija.KupacId}, PocetakRezervacije:{rezervacija.PocetakRezervacije}, KrajRezervacije:{rezervacija.KrajRezervacije}");
-        }
-        public void izlistajOpremuPoVozilu(List<VoziloOprema> vozilo_oprema)
-        {
-            foreach(var vo in vozilo_oprema)
-                Console.WriteLine($"VoziloId:{vo.VoziloID}, OpremaId:{vo.OpremaID}");
-        }
-        public void izlistajZahteveZaRezervaciju(List<ZahtevRezervacija> zahteviRezervacija)
-        {
-            foreach (var zr in zahteviRezervacija)
-                Console.WriteLine($"VoziloId:{zr.VoziloID}, KupacId:{zr.KupacID}, DatumDolaska:{zr.DatumDolaska}, PocetakRezervacije:{zr.PocetakRezervacije}, BrojDana:{zr.BrojDana}");
-        }
-        public void izlistajNoveRezervacije(List<Rezervacija> noveRezervacije)
-        {
-            //TODO izlistajNoveRezervacije
-            throw new NotImplementedException();
-        }
+                while (!reader.EndOfStream)
+                {
+                    var line = reader.ReadLine();
+                    var values = line.Split(',');
 
+                    var rezervacija = new Rezervacija();
+                    rezervacija.VoziloId = int.Parse(values[0]);
+                    rezervacija.KupacId = int.Parse(values[1]);
+                    rezervacija.PocetakRezervacije = DateOnly.Parse(values[2]);
+                    rezervacija.KrajRezervacije = DateOnly.Parse(values[3]);
+
+                    nove_rezervacije.Add(rezervacija);
+                }
+            }
+
+            return nove_rezervacije;
+        }
     }
 }

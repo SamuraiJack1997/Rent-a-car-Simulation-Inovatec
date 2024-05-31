@@ -1,0 +1,13 @@
+C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\PublishedApplication\CSV\kupci.csv
+C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\PublishedApplication\CSV\nove_rezervacije.csv
+C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\PublishedApplication\CSV\oprema.csv
+C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\PublishedApplication\CSV\rezervacije.csv
+C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\PublishedApplication\CSV\vozila.csv
+C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\PublishedApplication\CSV\vozilo_oprema.csv
+C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\PublishedApplication\CSV\zahtevi_za_rezervacije.csv
+C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\PublishedApplication\Rent-a-car-Simulation-Inovatec.exe
+C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\PublishedApplication\Rent-a-car-Simulation-Inovatec.dll
+C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\PublishedApplication\Rent-a-car-Simulation-Inovatec.deps.json
+C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\PublishedApplication\Rent-a-car-Simulation-Inovatec.runtimeconfig.json
+C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\PublishedApplication\Rent-a-car-Simulation-Inovatec.pdb
+C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\PublishedApplication\CsvHelper.dll

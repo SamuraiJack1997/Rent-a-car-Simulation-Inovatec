@@ -6,7 +6,12 @@
     <RootNamespace>Rent_a_car_Simulation_Inovatec</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ApplicationIcon>Inovatec.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Inovatec.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="CsvHelper" Version="32.0.3" />
@@ -14,6 +19,9 @@
 
   <ItemGroup>
     <None Update="CSV\kupci.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="CSV\nove_rezervacije.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="CSV\oprema.csv">

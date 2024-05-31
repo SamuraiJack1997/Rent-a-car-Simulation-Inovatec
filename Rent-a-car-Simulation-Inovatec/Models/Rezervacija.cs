@@ -12,5 +12,10 @@ namespace Rent_a_car_Simulation_Inovatec.Models
         public int KupacId {  get; set; }
         public DateOnly PocetakRezervacije { get; set; }
         public DateOnly KrajRezervacije { get; set; }
+
+        public override string? ToString()
+        {
+            return $"VoziloID: {VoziloId}, KupacID:{KupacId}, Pocetak Rezervacije:{PocetakRezervacije}, Kraj Rezervacije:{KrajRezervacije}";
+        }
     }
 }

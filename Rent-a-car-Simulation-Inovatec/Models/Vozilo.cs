@@ -26,5 +26,18 @@ namespace Rent_a_car_Simulation_Inovatec.Models
             IStrategijaCena strategijaCena = (tipVozila == TipVozila.Automobil) ? new AutoStrategijaCena() : new MotorStrategijaCena();
             return strategijaCena.IzracunajCenu(this, kupac, brojDana);
         }
+
+        public override string? ToString()
+        {
+            string vozilo;
+            vozilo = "[ID:" + Id + ", Tip vozila:" + tipVozila + ", Marka:" + marka + ", Model:" + Model + ", Potrosnja:" + Potrosnja + ", ";
+
+            if (Kubikaza.Equals(null)) vozilo += "Kubikaza:None, "; else vozilo += " Kubikaza:" + Kubikaza + ", ";
+            if (Kilometraza.Equals(null)) vozilo += "Kilometraza:None, "; else vozilo += "Kilometraza:" + Kilometraza + ", ";
+            if (Snaga.Equals(null)) vozilo += "Snaga:None, "; else vozilo += "Snaga:" + Snaga + ", ";
+
+            vozilo += "Tip:" + tip+"]";
+            return vozilo;
+        }
     }
 }

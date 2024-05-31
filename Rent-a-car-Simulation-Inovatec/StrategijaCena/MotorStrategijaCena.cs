@@ -43,10 +43,11 @@ namespace Rent_a_car_Simulation_Inovatec.StrategijaCena
                     if (o.PovecavaCenu.Equals(1))
                         konacnaCena += o.Cena;
 
-            if (kupac.clanarina.Equals(Clanarina.VIP))
-                konacnaCena -= pocetnaCena * 0.20;
-            else if (kupac.clanarina.Equals(Clanarina.Basic))
-                konacnaCena -= pocetnaCena * 0.10;
+            if (kupac != null)
+                if (kupac.clanarina.Equals(Clanarina.VIP))
+                    konacnaCena -= pocetnaCena * 0.20;
+                else if (kupac.clanarina.Equals(Clanarina.Basic))
+                    konacnaCena -= pocetnaCena * 0.10;
 
             return konacnaCena*BrojDana;
         }

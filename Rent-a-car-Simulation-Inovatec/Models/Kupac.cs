@@ -14,6 +14,10 @@ namespace Rent_a_car_Simulation_Inovatec.Models
         public string Prezime { get; set; }
         public double Budzet { get; set; }
         public Clanarina clanarina { get; set; }
-    
+
+        public override string? ToString()
+        {
+            return "[ID:"+Id+", Ime i prezime:"+Ime+" "+Prezime+", Budzet:"+Budzet+", Clanarina:"+clanarina+"]";
+        }
     }
 }

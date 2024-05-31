@@ -46,3 +46,4 @@ C:\Users\aleks\Source\Repos\Rent-a-car-Simulation-Inovatec\Rent-a-car-Simulation
 C:\Users\aleks\Source\Repos\Rent-a-car-Simulation-Inovatec\Rent-a-car-Simulation-Inovatec\obj\Debug\net8.0\Rent-a-car-Simulation-Inovatec.pdb
 C:\Users\aleks\Source\Repos\Rent-a-car-Simulation-Inovatec\Rent-a-car-Simulation-Inovatec\obj\Debug\net8.0\Rent-a-car-Simulation-Inovatec.genruntimeconfig.cache
 C:\Users\aleks\Source\Repos\Rent-a-car-Simulation-Inovatec\Rent-a-car-Simulation-Inovatec\obj\Debug\net8.0\ref\Rent-a-car-Simulation-Inovatec.dll
+C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\Rent-a-car-Simulation-Inovatec\bin\Debug\net8.0\CSV\nove_rezervacije.csv
