@@ -21,9 +21,6 @@
     <None Update="CSV\kupci.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="CSV\nove_rezervacije.csv">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="CSV\oprema.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

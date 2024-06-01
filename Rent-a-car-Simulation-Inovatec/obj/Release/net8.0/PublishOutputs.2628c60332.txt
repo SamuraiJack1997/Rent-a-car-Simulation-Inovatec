@@ -1,5 +1,4 @@
 C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\PublishedApplication\CSV\kupci.csv
-C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\PublishedApplication\CSV\nove_rezervacije.csv
 C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\PublishedApplication\CSV\oprema.csv
 C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\PublishedApplication\CSV\rezervacije.csv
 C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\PublishedApplication\CSV\vozila.csv

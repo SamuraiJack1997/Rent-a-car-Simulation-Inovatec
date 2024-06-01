@@ -1,6 +1,5 @@
 C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\Rent-a-car-Simulation-Inovatec\bin\Release\net8.0\Rent-a-car-Simulation-Inovatec.exe
 C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\Rent-a-car-Simulation-Inovatec\bin\Release\net8.0\CSV\kupci.csv
-C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\Rent-a-car-Simulation-Inovatec\bin\Release\net8.0\CSV\nove_rezervacije.csv
 C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\Rent-a-car-Simulation-Inovatec\bin\Release\net8.0\CSV\oprema.csv
 C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\Rent-a-car-Simulation-Inovatec\bin\Release\net8.0\CSV\rezervacije.csv
 C:\Users\aleks\Desktop\Rent-a-car-Simulation-Inovatec\Rent-a-car-Simulation-Inovatec\bin\Release\net8.0\CSV\vozila.csv

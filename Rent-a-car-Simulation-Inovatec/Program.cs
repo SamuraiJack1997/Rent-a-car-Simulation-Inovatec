@@ -59,13 +59,13 @@ namespace Rent_a_car_Simulation_Inovatec
             List<Kupac> kupci = csvManager.loadKupci();
             List<Oprema> oprema = csvManager.loadOprema();
             List<Rezervacija> rezervacije = csvManager.loadRezervacija();
-            vozila = csvManager.loadVozilaOprema(vozila,oprema);
-            List<ZahtevRezervacija> zahtevi_za_rezervacije=csvManager.loadZahteviRezervacije();
+            vozila = csvManager.loadVozilaOprema(vozila, oprema);
+            List<ZahtevRezervacija> zahtevi_za_rezervacije = csvManager.loadZahteviRezervacije();
 
             outputManager.izlistajVozila(vozila);
             outputManager.izlistajKupce(kupci);
             outputManager.izlistajOpremu(oprema);
-            outputManager.izlistajZahteveZaRezervaciju(zahtevi_za_rezervacije,kupci,vozila);
+            outputManager.izlistajZahteveZaRezervaciju(zahtevi_za_rezervacije, kupci, vozila);
 
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("-------------------------------------------------");
@@ -76,7 +76,7 @@ namespace Rent_a_car_Simulation_Inovatec
             simulacijaIznajmljivanja(vozila, kupci, oprema, rezervacije, zahtevi_za_rezervacije);
 
             List<Rezervacija> nove_rezervacije = csvManager.loadNoveRezervacije();
-            outputManager.izlistajNoveRezervacije(nove_rezervacije,kupci,vozila);
+            outputManager.izlistajNoveRezervacije(nove_rezervacije, kupci, vozila);
 
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("-------------------------------------------------");
@@ -90,19 +90,32 @@ namespace Rent_a_car_Simulation_Inovatec
 
         static void simulacijaIznajmljivanja(List<Vozilo> vozila, List<Kupac> kupci, List<Oprema> oprema, List<Rezervacija> rezervacije, List<ZahtevRezervacija> zahtevi_za_rezervacije)
         {
+            //Putanja do nove_rezervacije.csv -> \Rent-a-car-Simulation-Inovatec\bin\Debug\net8.0\CSV
             inicijalizujCSVFajl();
-            foreach (var zahtev in zahtevi_za_rezervacije)
-            {
-                Vozilo vozilo = vozila.FirstOrDefault(v => v.Id == zahtev.VoziloID);
-                Kupac kupac = kupci.FirstOrDefault(k => k.Id == zahtev.KupacID);
 
-                if (vozilo != null && kupac != null)
+            var zahteviGrupisaniPoDatumuDolaska = zahtevi_za_rezervacije.GroupBy(x => x.DatumDolaska).OrderBy(y => y.Key);
+
+            foreach (var grupa in zahteviGrupisaniPoDatumuDolaska)
+            {
+                var sortiraniZahtevi = grupa.OrderBy(x =>
                 {
-                    rezervisiVozilo(vozilo, kupac, zahtev.PocetakRezervacije, zahtev.PocetakRezervacije.AddDays(zahtev.BrojDana),rezervacije);
-                }
-                else
+                    var kupac = kupci.First(y => y.Id == x.KupacID);
+                    return kupac.clanarina == Clanarina.VIP ? 1 : kupac.clanarina == Clanarina.Basic ? 2 : 3;
+                }).ToList();
+
+                foreach (var zahtev in sortiraniZahtevi)
                 {
-                    Console.WriteLine($"Neuspesno iznajmljivanje:\n-Kupac: {kupac.Ime} {kupac.Prezime}\n-Vozilo: {vozilo.tipVozila}[{vozilo.marka} {vozilo.Model}] Tip[{vozilo.tip}]\n-Razlog: Kupac ili vozilo nisu pronadjeni\n");
+                    Vozilo vozilo = vozila.FirstOrDefault(v => v.Id == zahtev.VoziloID);
+                    Kupac kupac = kupci.FirstOrDefault(k => k.Id == zahtev.KupacID);
+
+                    if (vozilo != null && kupac != null)
+                    {
+                        rezervisiVozilo(vozilo, kupac, zahtev.PocetakRezervacije, zahtev.PocetakRezervacije.AddDays(zahtev.BrojDana), rezervacije);
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Neuspesno iznajmljivanje:\n-Kupac: {kupac?.Ime} {kupac?.Prezime}\n-Vozilo: {vozilo?.tipVozila}[{vozilo?.marka} {vozilo?.Model}] Tip[{vozilo?.tip}]\n-Razlog: Kupac ili vozilo nisu pronadjeni\n");
+                    }
                 }
             }
         }
@@ -110,9 +123,11 @@ namespace Rent_a_car_Simulation_Inovatec
         static void rezervisiVozilo(Vozilo vozilo, Kupac kupac, DateOnly pocetakRezervacije, DateOnly krajRezervacije, List<Rezervacija> rezervacije)
         {
             CSVManager csvManager = CSVManager.GetInstance();
+
             bool voziloDostupno = !rezervacije.Any(r => r.VoziloId == vozilo.Id &&
-                                                       (pocetakRezervacije.CompareTo(r.KrajRezervacije) <= 0 && pocetakRezervacije.CompareTo(r.PocetakRezervacije) >= 0 ||
-                                                        pocetakRezervacije.CompareTo(r.PocetakRezervacije) <= 0 && krajRezervacije.CompareTo(r.PocetakRezervacije) >= 0));
+                                                  ((pocetakRezervacije <= r.KrajRezervacije && pocetakRezervacije >= r.PocetakRezervacije) ||
+                                                  (krajRezervacije <= r.KrajRezervacije && krajRezervacije >= r.PocetakRezervacije) ||
+                                                  (pocetakRezervacije <= r.PocetakRezervacije && krajRezervacije >= r.KrajRezervacije)));
 
             if (voziloDostupno)
             {
@@ -123,7 +138,13 @@ namespace Rent_a_car_Simulation_Inovatec
                     double cena = vozilo.IzracunajCenu(kupac, brojDana);
                     kupac.Budzet -= cena;
 
-                    csvManager.sacuvajNoveRezervacije(new Rezervacija { VoziloId = vozilo.Id, KupacId = kupac.Id, PocetakRezervacije = pocetakRezervacije, KrajRezervacije = krajRezervacije });
+                    csvManager.sacuvajNoveRezervacije(new Rezervacija
+                    {
+                        VoziloId = vozilo.Id,
+                        KupacId = kupac.Id,
+                        PocetakRezervacije = pocetakRezervacije,
+                        KrajRezervacije = krajRezervacije
+                    });
                 }
                 else
                 {
